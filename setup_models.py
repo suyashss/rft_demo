@@ -42,7 +42,7 @@ def main():
     model1 = "meta-llama/Llama-3.1-70B-Instruct"
     download_model.remote(model1)
 
-#    model2 = "meta-llama/Llama-3.1-8B-Instruct"
-#    download_model.remote(model2)
-#    print("Downloaded all models")
+    model2 = "meta-llama/Llama-3.1-8B-Instruct"
+    download_model.remote(model2)
+    print("Downloaded all models")
 
