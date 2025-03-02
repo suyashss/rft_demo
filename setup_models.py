@@ -22,7 +22,8 @@ download_image = (
 @app.function(
     volumes={MODEL_DIR: volume},  # "mount" the Volume, sharing it with your function
     image=download_image,  # only download dependencies needed here
-    secrets=[modal.Secret.from_name("huggingface")] # huggingface token
+    secrets=[modal.Secret.from_name("huggingface")], # huggingface token
+    timeout=3600 # set longer timeout for large model download
 )
 def download_model(
     repo_id: str="hf-internal-testing/tiny-random-GPTNeoXForCausalLM",
