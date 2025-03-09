@@ -123,7 +123,7 @@ def launch(
     trainer = GRPOTrainer(
         model = model,
         processing_class = tokenizer,
-        reward_funcs = [binary_reward_func],
+        reward_funcs = [correctness_reward_func],
         args = training_args,
         train_dataset = train_ds,
         eval_dataset = eval_ds,
